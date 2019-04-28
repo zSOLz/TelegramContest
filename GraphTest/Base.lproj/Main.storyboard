@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NaA-Qh-v85">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Navigation Controller-->
+        <scene sceneID="tku-nn-57r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NaA-Qh-v85" customClass="CustomNavigationController" customModule="GraphTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yx1-v2-dDG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4cz-HI-Q1Y" kind="relationship" relationship="rootViewController" id="oZq-gm-h2J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sy9-Yu-HQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="2"/>
+        </scene>
+        <!--Charts Stack View Controller-->
+        <scene sceneID="Ekf-3a-MVs">
+            <objects>
+                <viewController id="4cz-HI-Q1Y" customClass="ChartsStackViewController" customModule="GraphTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9L8-Ei-wVB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" canCancelContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiE-34-vbt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kZL-Xs-rPx">
+                                        <rect key="frame" x="0.0" y="5" width="375" height="1"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHl-dR-wY9">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="mvv-jr-cHs"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="900" verticalHuggingPriority="900" horizontalCompressionResistancePriority="910" verticalCompressionResistancePriority="910" text="P.S. Hope you enjoyed the app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hi-85-WDR">
+                                        <rect key="frame" x="16" y="46" width="343" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="900" verticalHuggingPriority="900" horizontalCompressionResistancePriority="910" verticalCompressionResistancePriority="910" text="P. P.S. If you like animations and want to see them more detailed just press the button below" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dms-Tb-2y5">
+                                        <rect key="frame" x="16" y="103" width="343" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqc-0G-5qE" customClass="ChartVisibilityItemView" customModule="GraphTest" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="151.5" width="345" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="joe-wa-FPx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fqc-0G-5qE" secondAttribute="bottom" constant="32" id="1oo-Sa-2eX"/>
+                                    <constraint firstItem="kZL-Xs-rPx" firstAttribute="top" secondItem="ZiE-34-vbt" secondAttribute="top" constant="5" id="D3F-cb-zAU"/>
+                                    <constraint firstItem="fqc-0G-5qE" firstAttribute="leading" secondItem="ZiE-34-vbt" secondAttribute="leading" constant="15" id="DqQ-Sv-vLH"/>
+                                    <constraint firstItem="dms-Tb-2y5" firstAttribute="top" secondItem="4hi-85-WDR" secondAttribute="bottom" constant="40" id="NO8-7O-1rw"/>
+                                    <constraint firstItem="kZL-Xs-rPx" firstAttribute="leading" secondItem="ZiE-34-vbt" secondAttribute="leading" id="OfW-SQ-qpB"/>
+                                    <constraint firstItem="dms-Tb-2y5" firstAttribute="leading" secondItem="ZiE-34-vbt" secondAttribute="leading" constant="16" id="VhW-bf-95Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="fqc-0G-5qE" secondAttribute="trailing" constant="15" id="YOQ-SV-fXt"/>
+                                    <constraint firstAttribute="trailing" secondItem="4hi-85-WDR" secondAttribute="trailing" constant="16" id="cZH-FX-YkZ"/>
+                                    <constraint firstItem="4hi-85-WDR" firstAttribute="leading" secondItem="ZiE-34-vbt" secondAttribute="leading" constant="16" id="dTt-X0-YfV"/>
+                                    <constraint firstAttribute="trailing" secondItem="kZL-Xs-rPx" secondAttribute="trailing" id="hZM-d0-ELO"/>
+                                    <constraint firstItem="fqc-0G-5qE" firstAttribute="top" secondItem="dms-Tb-2y5" secondAttribute="bottom" constant="15" id="r7X-Mm-gi3"/>
+                                    <constraint firstItem="kZL-Xs-rPx" firstAttribute="width" secondItem="ZiE-34-vbt" secondAttribute="width" id="syA-dE-Qd9"/>
+                                    <constraint firstAttribute="trailing" secondItem="dms-Tb-2y5" secondAttribute="trailing" constant="16" id="ulI-Bd-VzE"/>
+                                    <constraint firstItem="4hi-85-WDR" firstAttribute="top" secondItem="kZL-Xs-rPx" secondAttribute="bottom" constant="40" id="ySk-eR-3Le"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="4cz-HI-Q1Y" id="7oO-6n-HXh"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZiE-34-vbt" secondAttribute="bottom" id="0Zp-RD-pEG"/>
+                            <constraint firstItem="ZiE-34-vbt" firstAttribute="top" secondItem="9L8-Ei-wVB" secondAttribute="top" id="7ei-dP-CKt"/>
+                            <constraint firstItem="ZiE-34-vbt" firstAttribute="leading" secondItem="9L8-Ei-wVB" secondAttribute="leading" id="KAa-va-uoN"/>
+                            <constraint firstAttribute="trailing" secondItem="ZiE-34-vbt" secondAttribute="trailing" id="ZzJ-Eo-kA9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ipB-mH-cX6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x2R-Ue-ccX"/>
+                    <connections>
+                        <outlet property="animationButton" destination="fqc-0G-5qE" id="FdZ-46-kaf"/>
+                        <outlet property="ppsLabel" destination="dms-Tb-2y5" id="MUB-Vo-DJP"/>
+                        <outlet property="psLabel" destination="4hi-85-WDR" id="Vlf-ct-iCV"/>
+                        <outlet property="scrollView" destination="ZiE-34-vbt" id="1xV-hD-21X"/>
+                        <outlet property="stackView" destination="kZL-Xs-rPx" id="LSd-Fc-ZRz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FA-LF-laV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826" y="1"/>
+        </scene>
+    </scenes>
+</document>
