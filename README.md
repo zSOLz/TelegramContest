@@ -1,5 +1,11 @@
 # Telegram April 2019 coding contest
-The source code of the winner app (1st place). The app shows best performance among all other apps. This results was reached by using CoreGraphocs which renders each frame separately.
+The source code of the winner app (1st place). The app shows best performance among all other apps. This results was reached by using CoreGraphics which renders each frame separately.
+Some features you may be interested in:
+- All rendering system id driven by **drawRect()** and **DispatchTimer**.  Classes with names *xxxRenderer* used for drawing.
+- The rendering of line chart. It draws every line segment separatly. It allow to reduce number of calculations on rendereing stage. I tested about 10 different ways to render line and keep this one as the most efficient.
+- Line chart may reduce number of vertices for VERY close coorinates. It cannot be visible but segnificantly increace performance.
+- Bar chart is fully optimized to be rendered in most efficient way (I tested about 5 different approaches).
+- Percent chart wasn't optimized so it shows the worst performance among all other charts. You may be interesting in transition animation to pie chart.
 
 # Disclaimer
 The code was made for contest purposes only. So please DO NOT USE THIS CODE IN PRODUCTION PROJECTS!
